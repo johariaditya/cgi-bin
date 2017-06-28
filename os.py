@@ -5,7 +5,6 @@ import cgi,cgitb
 
 cgitb.enable()
 print "Content-type:text/html\r\n\r\n"
-print ""
 
 data=cgi.FieldStorage()
 choice=data.getvalue('ch')
@@ -16,15 +15,13 @@ choice=data.getvalue('ch')
 
 
 
-if  choice == "os":
+if  choice == "linux":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/os.html'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/obclientlinux.sh'>"
 	
 	
-elif  choice == "bs":
+elif  choice == "windows":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/bstorage.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/obclientwindows.sh'>"
 	
-
-
 
