@@ -23,7 +23,7 @@ if  choice == "os":
 	
 elif  choice == "bs":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/bstorage.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/bstorage.html'>"
 	
 
 

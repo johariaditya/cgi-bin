@@ -23,5 +23,8 @@ if  choice == "saas":
 elif choice == "staas":	
 	 print "<META HTTP-EQUIV='refresh' content='0; url=/staas.html'>"
 	
+	
+elif choice == "iaas":	
+	 print "<META HTTP-EQUIV='refresh' content='0; url=/iaasinfo.html'>"
 
 

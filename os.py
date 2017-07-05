@@ -17,7 +17,7 @@ choice=data.getvalue('ch')
 
 if  choice == "linux":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/obclientlinux.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/info.html'>"
 	
 	
 elif  choice == "windows":
