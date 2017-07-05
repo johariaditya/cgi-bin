@@ -10,11 +10,6 @@ data=cgi.FieldStorage()
 choice=data.getvalue('ch')
 
 
-#a=commands.getstatusoutput("sudo cat /var/www/html/users.txt | grep "+username+" | awk '{print $1}'")
-#b=commands.getstatusoutput("sudo cat /var/www/html/users.txt | grep "+username+" | awk '{print $3}'")
-
-
-
 if  choice == "linux":
 
 	print "<META HTTP-EQUIV='refresh' content='0; url=/info.html'>"
@@ -22,6 +17,6 @@ if  choice == "linux":
 	
 elif  choice == "windows":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/obclientwindows.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/obsamba.html'>"
 	
 

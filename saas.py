@@ -10,31 +10,28 @@ data=cgi.FieldStorage()
 choice=data.getvalue('ch')
 
 
-#a=commands.getstatusoutput("sudo cat /var/www/html/users.txt | grep "+username+" | awk '{print $1}'")
-#b=commands.getstatusoutput("sudo cat /var/www/html/users.txt | grep "+username+" | awk '{print $3}'")
-
 
 
 if  choice == "Firefox":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/firefox.sh'/>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/firefox.tar'/>"
 	
 	
 elif  choice == "Calculator":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/calculator.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/calculator.tar'>"
 	
 elif  choice == "Webcam":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/webcam.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/webcam.tar'>"
 
 elif  choice == "Screenshot":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/screenshot.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/screenshot.tar'>"
 
 elif  choice == "Office":
 
-	print "<META HTTP-EQUIV='refresh' content='0; url=/office.sh'>"
+	print "<META HTTP-EQUIV='refresh' content='0; url=/office.tar'>"
 
 elif  choice == "VLC":
 

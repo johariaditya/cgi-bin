@@ -23,7 +23,7 @@ commands.getstatusoutput('sudo systemctl enable tgtd')
 os.system('sudo echo yum install iscsi-initiator-utils -y > /var/www/cgi-bin/bstorage.sh')
 os.system('sudo echo iscsiadm --mode node --targetname {} --portal 192.168.122.240:3260 --login >> /var/www/cgi-bin/bstorage.sh'.format(dname))
 
-commands.getstatusoutput('sudo chmod   777   bstorage.sh')
+commands.getstatusoutput('sudo chmod  +x   bstorage.sh')
 
 commands.getstatusoutput('sudo tar cvf     ../html/blockstorage.tar    bstorage.sh')
 
