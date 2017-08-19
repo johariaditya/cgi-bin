@@ -28,7 +28,7 @@ try:
 
 	#Writing in to the targets.conf file
 	commands.getstatusoutput('sudo echo "<target {}>" >>/etc/tgt/targets.conf'.format(dname))
-	commands.getstatusoutput('sudo echo "backing-store /dev/myadhocvg/{}" >>/etc/tgt/targets.conf'.format(dname))
+	commands.getstatusoutput('sudo echo "backing-store /dev/adhocvg/{}" >>/etc/tgt/targets.conf'.format(dname))
 	commands.getstatusoutput('sudo echo "</target>" >>/etc/tgt/targets.conf'.format(dname))
 	commands.getstatusoutput('sudo echo " " >>/etc/tgt/targets.conf')
 

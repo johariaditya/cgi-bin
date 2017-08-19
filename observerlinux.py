@@ -23,7 +23,7 @@ try:
 	mariadb_connection.commit()
 
 	#Logical volume is created
-	lvcreate=commands.getstatusoutput('sudo lvcreate --name '+d_name+' --size '+d_size+'M adhocvg -y')
+	lvcreate=commands.getstatusoutput('sudo lvcreate -V'+d_size+'G --name '+d_name+' --thin adhocvg/pool1 -y')
 	#The drive is formatted with ext4	
 	lvformat=commands.getstatusoutput('sudo mkfs.ext4 /dev/adhocvg/'+d_name)
 	
@@ -51,12 +51,12 @@ try:
 	#The client side code is put into a file
 
 	#The direcory is made on the client side on which the drive would be mounted
-	make_dr='sudo echo mkdir /media/{} > obclientlinux.sh'.format(d_name)
+	commands.getstatusoutput('sudo echo mkdir /media/{} > obclientlinux.sh'.format(d_name))
 
 	#The drive from the server side is mounted on to the client side
-	make_sh='sudo echo mount 192.168.122.240:/mnt/{}   /media/{}>> obclientlinux.sh'.format(d_name,d_name)
-	make_dir=commands.getstatusoutput(make_dr)
-	make_sh_file=commands.getstatusoutput(make_sh)
+	commands.getstatusoutput('sudo echo mount 192.168.122.240:/mnt/{}   /media/{}>> obclientlinux.sh'.format(d_name,d_name))
+	#make_dir=commands.getstatusoutput(make_dr)
+	#make_sh_file=commands.getstatusoutput(make_sh)
 
 	#Executable Permission is given to the client file	
 	perm=commands.getstatusoutput('sudo chmod   +x   obclientlinux.sh')
@@ -72,5 +72,4 @@ except mariadb.Error as error:
 	#if there is an error during the data insertion, error message is displayed	
 	print "<script>alert('Drive name already exists/blank entry, please try again')</script>"
 	print "<META HTTP-EQUIV='refresh' content='0; url=/info.html'/>"
-
 

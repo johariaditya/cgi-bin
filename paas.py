@@ -15,6 +15,7 @@ choice=data.getvalue('ch')
 
 
 if  choice == "python":
+	#The docker is started
 	commands.getoutput('sudo docker start 8104b5559246')
 	x=commands.getoutput('sudo docker exec -it 8104b555924 /usr/bin/python')
 	print "<a href='http://192.168.122.1:4200'>"
